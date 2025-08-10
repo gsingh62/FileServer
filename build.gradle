@@ -1,0 +1,22 @@
+plugins {
+    id 'war'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.glassfish.jersey.containers:jersey-container-servlet:3.1.7"
+    implementation "org.glassfish.jersey.core:jersey-server:3.1.7"
+    implementation "org.glassfish.jersey.inject:jersey-hk2:3.1.7"
+
+    compileOnly "jakarta.servlet:jakarta.servlet-api:6.0.0"
+}
+
+war {
+    archiveBaseName = 'file-resource-server'
+}
